@@ -5,20 +5,29 @@
     <meta charset="UTF-8">
     <title>Iceland Slideshow</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            background: black;
-            overflow: hidden;
-            height: 100vh;
-        }
-        img {
-            max-height: 100vh;
-            max-width: 100vw;
-            display: block;
-            margin: auto;
-            object-fit: contain;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* maintains aspect ratio and avoids cropping */
+    }
     </style>
 </head>
 <body onclick="nextSlide()">
